@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">COM4510Assessment</string>
+
+    <!-- gallery|home -->
+    <string name="btnAddTrip">Add Trip</string>
+    <string name="btnViewMap">View Map</string>
+
+    <!-- general -->
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+
+    <string name="title2"><u>Title</u></string>
+    <string name="description2"><u>Description</u></string>
+
+    <!-- edit image -->
+    <string name="btnCancel">Cancel</string>
+    <string name="btnSave">Save</string>
+    <string name="btnDelete">Delete</string>
+
+    <!-- add trip -->
+    <string name="tripTitle">Trip Title</string>
+
+    <!-- search -->
+    <string name="searchImg">Search Image Here</string>
+
+    <!-- layout -->
+    <string name="trip_fragment_label">Trip Fragment</string>
+    <string name="map_fragment_label">Map Fragment</string>
+
+    <!-- map service -->
+
+    <string name="ok">OK</string>
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
+    <string name="request_location_updates">Request location updates</string>
+    <string name="remove_location_updates">Remove location updates</string>
+    <string name="launch_activity">Launch activity</string>
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <!-- map view -->
+    <string name="title_activity_edit">EditActivity</string>
+    <string name="exit">Exit</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="search_image">Search Image</string>
+    <string name="trip_title">Trip title</string>
+    <string name="view_on_map">View On Map</string>
+    <string name="sort_by">Sort By:</string>
+</resources>

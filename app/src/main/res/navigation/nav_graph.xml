@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/TripFragment">
+
+    <fragment
+        android:id="@+id/TripFragment"
+        android:name="uk.ac.shef.oak.com4510.view.TripFragment"
+        android:label="@string/trip_fragment_label"
+        tools:layout="@layout/fragment_trip">
+
+        <action
+            android:id="@+id/action_TripFragment_to_MapFragment"
+            app:destination="@id/MapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="uk.ac.shef.oak.com4510.view.MapFragment"
+        android:label="@string/map_fragment_label"
+        tools:layout="@layout/fragment_map">
+
+        <action
+            android:id="@+id/action_MapFragment_to_TripFragment"
+            app:destination="@id/TripFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="uk.ac.shef.oak.com4510">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Lab5_kt">
+        <service
+            android:name=".service.LocationService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location" >
+        </service>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="uk.ac.shef.oak.com4510.view.inspect.EditActivity"
+            android:exported="false" />
+        <activity
+            android:name="uk.ac.shef.oak.com4510.view.trip.MapActivity"
+            android:exported="true" />
+        <activity
+            android:name="uk.ac.shef.oak.com4510.view.main.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="uk.ac.shef.oak.com4510.view.inspect.DisplayActivity"
+            android:exported="true" />
+        <activity
+            android:name="uk.ac.shef.oak.com4510.view.inspect.MapBrowseActivity"
+            android:exported="true" />
+        <activity
+            android:name="uk.ac.shef.oak.com4510.view.search.SearchActivity"
+            android:exported="true" />
+
+        <receiver android:name="uk.ac.shef.oak.com4510.view.trip.MapActivity$LocationReceiver"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="uk.ac.shef.oak.com4510.LOCATION" >
+                </action>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
